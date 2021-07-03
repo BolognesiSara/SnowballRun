@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
             transform.position += Vector3.down * jumpStrenght * Time.deltaTime;
         }
 
+        time += Time.deltaTime/100000;
+        transform.localScale += new Vector3 (time, time, time);
+
     }
 
 }
