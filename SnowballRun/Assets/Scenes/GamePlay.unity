@@ -216,7 +216,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 977bbffdb45856043820872860803a58, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -481,6 +481,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snowball
       objectReference: {fileID: 0}
+    - target: {fileID: 8374678895792350724, guid: a1fc809a92a68b8418d47096b6b2f882,
+        type: 3}
+      propertyPath: jumpStrenght
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8812887215964195875, guid: a1fc809a92a68b8418d47096b6b2f882,
         type: 3}
       propertyPath: m_RootOrder
@@ -509,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 8812887215964195875, guid: a1fc809a92a68b8418d47096b6b2f882,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 8812887215964195875, guid: a1fc809a92a68b8418d47096b6b2f882,
         type: 3}
@@ -571,9 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8e200cde0c07d4da1a82954f3bcdea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardVelocity: 1
-  lateralVelocity: 1
   jumpStrenght: 3
+  speedMove: 2
 --- !u!54 &1084724212
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -602,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8444412b810a79c4081a7238e5741847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 2121507199}
+  text: {fileID: 0}
   scoreText: {fileID: 1754040047}
 --- !u!1 &1369882604
 GameObject:
