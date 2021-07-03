@@ -7,14 +7,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float forwardVelocity;
     [SerializeField] private float lateralVelocity;
     [SerializeField] private float jumpStrenght;
+    private float time;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKey(KeyCode.DownArrow))
@@ -44,6 +38,9 @@ public class Player : MonoBehaviour
         {
             transform.position += Vector3.back * lateralVelocity * Time.deltaTime;
         }
+
+        time += Time.deltaTime/100000;
+        transform.localScale += new Vector3 (time, time, time);
 
     }
 }
