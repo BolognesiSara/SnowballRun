@@ -10,7 +10,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Movement();
+        if (GameManager.alive)
+            Movement();
+        else
+            transform.position = Vector3.zero;
     }
 
     private void Movement()
