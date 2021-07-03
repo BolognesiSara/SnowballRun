@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpStrenght = 3;
     [SerializeField] private float speedMove = 2;
     private float time;
+    [SerializeField] private float scaleSizeMAX = 2;
 
     void Update()
     {
@@ -30,8 +31,11 @@ public class Player : MonoBehaviour
             transform.position += Vector3.down * jumpStrenght * Time.deltaTime;
         }
 
-        time += Time.deltaTime/100000;
-        transform.localScale += new Vector3 (time, time, time);
+        if (transform.localScale.x < scaleSizeMAX && transform.localScale.y < scaleSizeMAX && transform.localScale.z < scaleSizeMAX) 
+        {
+            time += Time.deltaTime / 100000;
+            transform.localScale += new Vector3(time, time, time);
+        }
 
     }
 
