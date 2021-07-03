@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class RockMovement : MonoBehaviour
 {
-    private int destroyWall=-16;
+    [SerializeField] float velocity=1;
+    private int destroyWall = -16;
+    private Vector3 direction = new Vector3(0, 0, -1);
     void Update()
     {
         Movement();
@@ -12,7 +14,7 @@ public class RockMovement : MonoBehaviour
 
     private void Movement()
     {
-        transform.position += new Vector3(0, 0, -1)*Time.deltaTime;
+        transform.position += velocity*direction * Time.deltaTime;
         Death();
     }
 
