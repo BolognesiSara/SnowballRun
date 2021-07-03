@@ -12,7 +12,7 @@ public class SpawnerManager : MonoBehaviour
 
     private void Start()
     {
-        timerRock = 0.1f;
+        timerRock = 3;
         time = 0;
     }
 

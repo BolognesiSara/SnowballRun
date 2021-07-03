@@ -5,35 +5,35 @@ using UnityEngine;
 
 public class SpawnRock : MonoBehaviour
 {
-    enum rock { rockBig, rockFlat, rockSmall }
-    rock rockSpawned;
+    enum Rock { rockBig, rockFlat, rockSmall }
+    Rock rockSpawned;
 
     [SerializeField] GameObject prefabRockBig;
     [SerializeField] GameObject prefabRockFlat;
     [SerializeField] GameObject prefabRockSmall;
+    [SerializeField] float lateralLimitSpawn = 4.0f;
     public void SpawnRocks()
     {
         int randomNuber = Random.Range(0, 3);
-        Debug.Log(randomNuber);
-        rockSpawned = (rock)randomNuber;
+        rockSpawned = (Rock)randomNuber;
 
         switch (rockSpawned)
         {
-            case rock.rockBig:
+            case Rock.rockBig:
                 {
-                    Vector3 position = new Vector3(Random.Range(-5.0f, 5.0f), 0, 0);
+                    Vector3 position = new Vector3(Random.Range(-lateralLimitSpawn, lateralLimitSpawn), 0, 0);
                     Instantiate(prefabRockBig, position, Quaternion.identity);
                 }
                 break;
-            case rock.rockFlat:
+            case Rock.rockFlat:
                 {
-                    Vector3 position = new Vector3(Random.Range(-5.0f, 5.0f), 0, 0);
+                    Vector3 position = new Vector3(Random.Range(-lateralLimitSpawn, lateralLimitSpawn), 0, 0);
                     Instantiate(prefabRockFlat, position, Quaternion.identity);
                 }
                 break;
-            case rock.rockSmall:
+            case Rock.rockSmall:
                 {
-                    Vector3 position = new Vector3(Random.Range(-5.0f, 5.0f), 0, 0);
+                    Vector3 position = new Vector3(Random.Range(-lateralLimitSpawn, lateralLimitSpawn), 0, 0);
                     Instantiate(prefabRockSmall, position, Quaternion.identity);
                 }
                 break;
