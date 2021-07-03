@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float jumpStrenght = 3;
     [SerializeField] private float speedMove = 2;
+    private float time;
 
 
     void Update()
